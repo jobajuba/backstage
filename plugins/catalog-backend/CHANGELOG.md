@@ -1,5 +1,23 @@
 # @backstage/plugin-catalog-backend
 
+## 0.14.0
+
+### Minor Changes
+
+- 89fd81a1ab: Add API endpoint for requesting a catalog refresh at `/refresh`, which is activated if a `RefreshService` is passed to `createRouter`.
+
+  The new method is used to trigger a refresh of an entity in an as localized was as possible, usually by refreshing the parent location.
+
+### Patch Changes
+
+- 9ef2987a83: Update `createLocation` to optionally return `exists` to signal that the location already exists, this is only returned for dry runs.
+- febddedcb2: Bump `lodash` to remediate `SNYK-JS-LODASH-590103` security vulnerability
+- Updated dependencies
+  - @backstage/catalog-client@0.4.0
+  - @backstage/backend-common@0.9.4
+  - @backstage/catalog-model@0.9.3
+  - @backstage/config@0.1.10
+
 ## 0.13.8
 
 ### Patch Changes

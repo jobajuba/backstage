@@ -1,5 +1,13 @@
 # @backstage/plugin-git-release-manager
 
+## 0.2.7
+
+### Patch Changes
+
+- 023350f910: Remove 'refresh' icon from success dialog's OK-CTA. User feedback deemed it confusing.
+- Updated dependencies
+  - @backstage/core-components@0.5.0
+
 ## 0.2.6
 
 ### Patch Changes
