@@ -17,6 +17,7 @@ import { EntityPolicy } from '@backstage/catalog-model';
 import { EntityRelationSpec } from '@backstage/catalog-model';
 import express from 'express';
 import { IndexableDocument } from '@backstage/search-common';
+import { JsonObject } from '@backstage/config';
 import { JsonValue } from '@backstage/config';
 import { Knex } from 'knex';
 import { Location as Location_2 } from '@backstage/catalog-model';
@@ -852,7 +853,7 @@ export type EntityPagination = {
 // @public (undocumented)
 export type EntityProcessingRequest = {
   entity: Entity;
-  state?: JsonValue;
+  state?: JsonObject;
 };
 
 // Warning: (ae-missing-release-tag) "EntityProcessingResult" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
@@ -861,7 +862,7 @@ export type EntityProcessingRequest = {
 export type EntityProcessingResult =
   | {
       ok: true;
-      state: JsonValue;
+      state: JsonObject;
       completedEntity: Entity;
       deferredEntities: DeferredEntity[];
       relations: EntityRelationSpec[];
