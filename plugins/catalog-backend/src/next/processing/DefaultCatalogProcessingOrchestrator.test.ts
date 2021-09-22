@@ -139,7 +139,7 @@ describe('DefaultCatalogProcessingOrchestrator', () => {
         },
       ],
       state: {
-        cache: {},
+        cache: { 'foo-bar': { emit: true } },
       },
     });
   });
