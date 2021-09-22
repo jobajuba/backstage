@@ -146,12 +146,12 @@ describe('DefaultCatalogProcessingOrchestrator', () => {
 
   it('accepts any state input', async () => {
     await expect(
-      orchestrator.process({ entity, state: null }),
+      orchestrator.process({ entity, state: null as any }),
     ).resolves.toMatchObject({
       ok: true,
     });
     await expect(
-      orchestrator.process({ entity, state: [] }),
+      orchestrator.process({ entity, state: [] as any }),
     ).resolves.toMatchObject({
       ok: true,
     });
@@ -166,12 +166,12 @@ describe('DefaultCatalogProcessingOrchestrator', () => {
       ok: true,
     });
     await expect(
-      orchestrator.process({ entity, state: 3 }),
+      orchestrator.process({ entity, state: 3 as any }),
     ).resolves.toMatchObject({
       ok: true,
     });
     await expect(
-      orchestrator.process({ entity, state: '}{' }),
+      orchestrator.process({ entity, state: '}{' as any }),
     ).resolves.toMatchObject({
       ok: true,
     });
